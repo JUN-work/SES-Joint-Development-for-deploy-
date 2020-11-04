@@ -17,7 +17,7 @@ $ok_count=$_SESSION['seikai']['ok_count'];
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="canonical" href="あなたのサイトURL" />
-    <link rel="icon" type="image/png" href="ファビコンのパス" />
+    <link rel="icon" type="../image/png" href="ファビコンのパス" />
     <!-- OGP設定 -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="あなたのサイトURL" />
@@ -57,10 +57,10 @@ $ok_count=$_SESSION['seikai']['ok_count'];
       <nav>
         <div class="container navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand mr-auto" href="index.php">
-            <img src="img/SE2.png" alt="サイト名" height="70"/>
+            <img src="../img/SE2.png" alt="サイト名" height="70"/>
           </a>
-          <a href="register.php" class="btn btn-secondary btn-lg mr-1 text-white">新規登録</a>
-          <a href="login.php" class="btn btn-primary btn-lg mr-1 text-white">ログイン</a>
+          <a href="../register.php" class="btn btn-secondary btn-lg mr-1 text-white">新規登録</a>
+          <a href="../login.php" class="btn btn-primary btn-lg mr-1 text-white">ログイン</a>
         </div>
       </nav>
     </header>
