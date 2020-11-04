@@ -1,4 +1,9 @@
 @charset "UTF-8";
+
+body {
+  background-color: white;
+}
+
 .questions__btn {
   position: relative;
   display: inline-block;

@@ -123,7 +123,7 @@ $_SESSION['kotae']=$kotae
   <link rel="stylesheet" href="../styles/account.css" />
   <link rel="stylesheet" href="../styles/top.css" />
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="../styles/style_answer.css">
 </head>
 <body id="page-top">
   <!----------------------------------------------->
