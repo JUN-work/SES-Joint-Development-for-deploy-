@@ -83,17 +83,11 @@ $_SESSION['rireki']['kekka'][$monme]=$hantei;
   <header>
       <nav>
         <div class="container navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand mr-auto" href="index.html"
-            ><img src="../img/logo.png" alt="サイト名" height="50"
-          /></a>
-          <a
-            href="register.html"
-            class="btn btn-secondary btn-lg mr-1 text-white"
-            >新規登録</a
-          >
-          <a href="login.html" class="btn btn-primary btn-lg mr-1 text-white"
-            >ログイン</a
-          >
+          <a class="navbar-brand mr-auto" href="index.php">
+            <img src="img/SE2.png" alt="サイト名" height="70"/>
+          </a>
+          <a href="register.php" class="btn btn-secondary btn-lg mr-1 text-white">新規登録</a>
+          <a href="login.php" class="btn btn-primary btn-lg mr-1 text-white">ログイン</a>
         </div>
       </nav>
     </header>
@@ -137,86 +131,7 @@ $_SESSION['rireki']['kekka'][$monme]=$hantei;
       ?>
       <!--<p>現在、<?php echo $monme;?>問中<?php echo $ok_count;?>問正解しています</p>-->
     </section> 
-  <!----------------------------------------------->
-  <footer id="footer" class="bg-light py-5">
-      <!--display-4→display-5、py-5→py-1に変更-->
-      <h2 class="display-5 text-center font-patrick py-1">
-        Production Staff's SNS
-      </h2>
-      <div class="container py-4 py-md-5">
-        <div id="footer-index" class="row pt-1">
-          <!--pt-4→pt-1に変更-->
-          <ul class="col list-unstyled">
-            <li>JUN</li>
-            <li>
-              <ul class="list-unstyled">
-                <li>
-                  <a href="https://twitter.com/JUN_work_life">Twitter</a>
-                </li>
-                <li><a href="https://github.com/JUN-work">GitHub</a></li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="col list-unstyled">
-            <li>Yuki.Ishizaki</li>
-            <li>
-              <ul class="list-unstyled">
-                <li><a href="https://twitter.com/zakky0519">Twitter</a></li>
-                <li>
-                  <a href="https://github.com/YukiIshizaki0525">GitHub</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="col list-unstyled">
-            <li>そってぃ</li>
-            <li>
-              <ul class="list-unstyled">
-                <li><a href="https://twitter.com/sohhprog">Twitter</a></li>
-                <li><a href="https://github.com/sohh85">GitHub</a></li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="col list-unstyled">
-            <li>綾</li>
-            <li>
-              <ul class="list-unstyled">
-                <li><a href="https://twitter.com/yanagi4939">Twitter</a></li>
-                <li>
-                  <a href="https://github.com/AYA-kurokiri09">GitHub</a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <ul class="col list-unstyled">
-            <li><a href="./contact/index.php">お問い合わせはこちら</a></li>
-            <!--contactフォルダ内のindex.php(お問い合わせページ)に飛びます-->
-          </ul>
-        </div>
-        <!-- /.footer-index -->
-
-        <div id="footer-logo" class="mt-2 mt-sm-4">
-          <div class="text-center d-sm-flex align-items-sm-center">
-            <a class="mr-4" href="index.html"
-              ><img src="../img/logo.png" alt="サイト名" height="50"
-            /></a>
-            <p class="mb-0">
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor.
-            </p>
-          </div>
-        </div>
-        <!-- .row -->
-      </div>
-      <!-- .container -->
-    </footer>
-
-    <div class="text-white bg-primary">
-      <p class="text-center mb-0 py-2">
-        <small>Copyright (C) サイト名. All Rights Reserved.</small>
-      </p>
-    </div>
-    <!----------------------------------------------->
+  
   <!-- javascript はここから -->  
   <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
