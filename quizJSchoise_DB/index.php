@@ -120,8 +120,8 @@ $_SESSION['kotae']=$kotae
       href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap"
       rel="stylesheet"
     />
-  <link rel="stylesheet" href="styles/account.css" />
-  <link rel="stylesheet" href="styles/top.css" />
+  <link rel="stylesheet" href="../styles/account.css" />
+  <link rel="stylesheet" href="../styles/top.css" />
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../styles/style.css">
 </head>

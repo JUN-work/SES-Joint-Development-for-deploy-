@@ -48,8 +48,8 @@ $ok_count=$_SESSION['seikai']['ok_count'];
       href="https://fonts.googleapis.com/css?family=Fredericka+the+Great&display=swap"
       rel="stylesheet"
     />
-  <link rel="stylesheet" href="styles/account.css" />
-  <link rel="stylesheet" href="styles/top.css" />
+  <link rel="stylesheet" href="../styles/account.css" />
+  <link rel="stylesheet" href="../styles/top.css" />
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../styles/style_answer.css">
 </head>
