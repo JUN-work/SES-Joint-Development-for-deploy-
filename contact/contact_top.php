@@ -86,6 +86,10 @@ if (isset($_REQUEST['action']) && $_REQUEST['action'] === 'rewrite'){
           </div>
 
         </form>
+
+        <a href="../index.php">
+          <input type="submit" class="btn btn-primary btn-block" name="confirm" value="トップへ戻る">
+        </a>  
       </div>
     </div>
 </body>
