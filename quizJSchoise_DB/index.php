@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start(); 
 
 //最初に1〜100から10個の数字を選んだ乱数配列を生成し、その数字に対応した問題No.($id)の情報を正解としてセット。
 if(!isset($_SESSION['rand'])){
