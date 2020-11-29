@@ -1,3 +1,5 @@
+#Exclude text files
 contact_confirm
 .env
 .DS_Store
+gittest
