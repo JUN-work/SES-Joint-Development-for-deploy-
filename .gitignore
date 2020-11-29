@@ -1,5 +1,5 @@
 #Exclude text files
-contact_confirm
-.env
-.DS_Store
+*.env
+*.DS_Store
 /gittest2.txt
+/contact/gittest
