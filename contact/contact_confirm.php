@@ -26,6 +26,7 @@ $formContent = htmlspecialchars($_SESSION['inquiry']['formContent'],ENT_QUOTES, 
       <div class=form-wrapper>
         <h2 class="sample-subtitle">入力内容の確認</h2>
         <form class="col-lg-6 mr-lg-auto px-0 contact-form" name="contact-form" method="post" action="sendgridjp-php-example/sendgrid-php-example.php">
+        <!--問題なくなったらaction=sendgridjp-php-example/sendgrid-php-example.phpに戻す-->
           <div class="form-group">
             <label for="formName">お名前 <span class="text-danger">*</span></label><br>
             <p id="contact-name"><?php echo $formName ?></p>
