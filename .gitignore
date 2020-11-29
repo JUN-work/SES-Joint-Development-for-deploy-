@@ -2,4 +2,4 @@
 *.env
 *.DS_Store
 /gittest2.txt
-/contact/gittest
+/contact/contact_confirm.php
