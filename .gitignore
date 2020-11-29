@@ -1,5 +1,4 @@
 #Exclude text file
 *.env
 *.DS_Store
-/gittest2.txt
 /contact/sendgrid-php/
