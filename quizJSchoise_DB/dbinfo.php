@@ -1,7 +1,6 @@
 <?php
-  /*
-  <!--ローカル:3〜16行目を使用　本番:18〜25行目を使用-->
-  define('DB_HOST', 'mysql');
+  //ローカル:3〜16行目を使用　本番:18〜25行目を使用
+  /* define('DB_HOST', 'mysql');
   define('DB_USER', 'default');
   define('DB_PASSWORD', 'root');
   define('DB_NAME', 'mysql');
@@ -13,7 +12,8 @@
   catch(PDOException $e){
     print('接続エラーが発生しました。:'.$e->getMessage());
     exit;
-  } */
+  } 
+*/
 
 $url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 $db_host = $url["host"];

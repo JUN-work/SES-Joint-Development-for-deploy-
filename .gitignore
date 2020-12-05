@@ -1,4 +1,4 @@
 #Exclude text file
 *.env
 *.DS_Store
-/contact/sendgrid-php/
+/contact/sendgrid-php/.env

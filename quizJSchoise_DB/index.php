@@ -1,6 +1,15 @@
 <?php
 session_start(); 
 
+// 問題途中でトップページに戻って、またここに戻ってきた場合に問題データをリセット
+if (!empty($_GET['type']) && !empty($_SESSION['type'])) {
+  $_SESSION['type'] = NULL;
+  $_SESSION['monme'] = NULL;
+  $_SESSION['seikai'] = NULL;
+  $_SESSION['rand'] = NULL;
+  $_SESSION['rireki'] = NULL;
+}
+
 //最初に1〜100から10個の数字を選んだ乱数配列を生成し、その数字に対応した問題No.($id)の情報を正解としてセット。
 if(!isset($_SESSION['rand'])){
   $rand=range(1,50);
@@ -24,8 +33,24 @@ $monme=$_SESSION['monme'];
 //DB情報の設定・接続チェック
 require_once dirname(__FILE__) . '/dbinfo.php';
 
+// urlパラメータでcssかjsか判断しセッションに格納。この値で処理を分岐させる。
+if ($_GET['type'] == 'css') {
+  $type = 'css';
+  $_SESSION['type'] = $type;
+} elseif ($_GET['type'] == 'js') {
+  $type = 'js';
+  $_SESSION['type'] = $type;
+} else {
+  $type = $_SESSION['type']; //answer.phpから戻ってきた場合
+}
+
+if ($type == 'css') {
+  $sql = "SELECT question,answer,explanation,url FROM css_questions WHERE id=:id;";
+} elseif ($type == 'js') {
+  $sql = "SELECT question,answer,explanation,url FROM js_questions WHERE id=:id;";
+}
+
 //選択された問題の情報を取得、取得した問題のカラムに入っている答え(answer)を正解としてセット。
-$sql="SELECT question,answer,explanation,url FROM js_questions WHERE id=:id;";
 $stmt=$pdo->prepare($sql);
 $stmt->bindParam(':id',$id);
 $stmt->execute();
@@ -82,7 +107,13 @@ $_SESSION['kotae']=$kotae
     prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"
   >
     <meta charset="UTF-8" />
+    <!--urlパラメータの値によってtitleが変わる-->
+    <?php if ($type == 'css') : ?>
+    <title>CSS - 選択式</title>
+    <?php elseif ($type == 'js') : ?>
     <title>JavaScript - 選択式</title>
+    <?php endif; ?>
+  
     <meta name="description" content="サイトの説明文" />
     <meta
       name="viewport"
@@ -130,11 +161,13 @@ $_SESSION['kotae']=$kotae
   <header>
       <nav>
         <div class="container navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand mr-auto" href="index.php">
+          <a class="navbar-brand mr-auto" href="../index.php">
             <img src="../img/SE2.png" alt="サイト名" height="70"/>
           </a>
+          <!--ログイン・新規登録を一時的に保留
           <a href="../register.php" class="btn btn-secondary btn-lg mr-1 text-white">新規登録</a>
           <a href="../login.php" class="btn btn-primary btn-lg mr-1 text-white">ログイン</a>
+          -->
         </div>
       </nav>
     </header>

@@ -1,5 +1,6 @@
 <?php
 session_start();
+$type = $_SESSION['type']; //セッション（CSS or JS）を変数に格納
 $ok_count=$_SESSION['seikai']['ok_count'];
 
 ?>
@@ -10,7 +11,13 @@ $ok_count=$_SESSION['seikai']['ok_count'];
     prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"
   >
     <meta charset="UTF-8" />
-    <title>結果発表　JavaScript - 選択式</title>
+    <!--urlパラメータの値によってtitleが変わる-->
+    <?php if ($type == 'css') : ?>
+    <title>結果発表 CSS - 選択式</title>
+    <?php elseif ($type == 'js') : ?>
+    <title>結果発表 JavaScript - 選択式</title>
+    <?php endif; ?>
+
     <meta name="description" content="サイトの説明文" />
     <meta
       name="viewport"
@@ -68,7 +75,12 @@ $ok_count=$_SESSION['seikai']['ok_count'];
     </header>
     <!----------------------------------------------->
     <div class="subheader">
+    <!--urlパラメータの値によってsubheaderが変わる-->
+      <?php if ($type == 'css') : ?>
+      <h2>CSS - 選択式</h2>
+      <?php elseif ($type == 'js') : ?>
       <h2>JavaScript - 選択式</h2>
+      <?php endif; ?>
     </div>
     <section class="questions">
         <div id="container">

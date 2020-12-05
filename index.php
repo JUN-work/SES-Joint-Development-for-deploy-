@@ -1,3 +1,15 @@
+<?php
+session_start();
+// 結果発表ページからのurlパラメータ or クイズ途中の場合 = クイズの履歴を全て削除
+if ($_GET['qs_session'] == 'delete') {
+  $_SESSION['type'] = NULL;
+  $_SESSION['monme'] = NULL;
+  $_SESSION['seikai'] = NULL;
+  $_SESSION['rand'] = NULL;
+  $_SESSION['rireki'] = NULL;
+}
+?>
+
 <!DOCTYPE html>
 <html>
   <head
@@ -50,8 +62,10 @@
           <a class="navbar-brand mr-auto" href="index.php">
             <img src="img/SE2.png" alt="サイト名" height="70"/>
           </a>
+          <!--ログイン・新規登録を一時的に保留
           <a href="register.php" class="btn btn-secondary btn-lg mr-1 text-white">新規登録</a>
           <a href="login.php" class="btn btn-primary btn-lg mr-1 text-white">ログイン</a>
+          -->
         </div>
       </nav>
     </header>
@@ -73,7 +87,7 @@
           <div class="questions__type">
             <span>選択式</span>
             <div class="questions__start">
-              <a href="#" class="btn btn-default btn-lg">学習する</a>
+              <a href="./quizJSchoise_DB/index.php?type=css" class="btn btn-default btn-lg">学習する</a>
             </div>
           </div>
           <br />
@@ -93,7 +107,7 @@
           <div class="questions__type">
             <span>選択式</span>
             <div class="questions__start">
-              <a href="quizJSchoise_DB/index.php" class="btn btn-default btn-lg">学習する</a>
+              <a href="./quizJSchoise_DB/index.php?type=js" class="btn btn-default btn-lg">学習する</a>
             </div>
           </div>
           <br />
@@ -153,11 +167,13 @@
               </ul>
             </li>
           </ul>
+          <!--お問い合わせ機能を保留
           <ul class="col list-unstyled">
             <li><button type="button" class="btn btn-light">
               <a href="./contact/contact_top.php">お問い合わせはこちら</a></button>
             </li>
           </ul>
+          -->
         </div><!-- /.footer-index -->
       </div><!-- .container -->
     </footer>
