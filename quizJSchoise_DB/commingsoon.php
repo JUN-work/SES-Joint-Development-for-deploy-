@@ -1,30 +1,16 @@
-<?php
-session_start();
-$type = $_SESSION['type']; //セッション（CSS or JS）を変数に格納
-$ok_count=$_SESSION['seikai']['ok_count'];
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head
     prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"
   >
     <meta charset="UTF-8" />
-    <!--urlパラメータの値によってtitleが変わる-->
-    <?php if ($type == 'css') : ?>
-    <title>結果発表 CSS - 選択式</title>
-    <?php elseif ($type == 'js') : ?>
-    <title>結果発表 JavaScript - 選択式</title>
-    <?php endif; ?>
-
     <meta name="description" content="サイトの説明文" />
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
     <link rel="canonical" href="あなたのサイトURL" />
-    <link rel="icon" type="../image/png" href="ファビコンのパス" />
+    <link rel="icon" type="image/png" href="ファビコンのパス" />
     <!-- OGP設定 -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="あなたのサイトURL" />
@@ -77,35 +63,14 @@ $ok_count=$_SESSION['seikai']['ok_count'];
     </header>
     <!----------------------------------------------->
     <div class="subheader">
-    <!--urlパラメータの値によってsubheaderが変わる-->
-      <?php if ($type == 'css') : ?>
-      <h2>CSS - 選択式</h2>
-      <?php elseif ($type == 'js') : ?>
-      <h2>JavaScript - 選択式</h2>
-      <?php endif; ?>
+      <h2>記述式クイズ</h2>
     </div>
     <section class="questions">
-        <div id="container">
-        <h1>Results</h1>
-        <p>10問中<?php echo$ok_count;?>問正解です。</p>
-        <table class="grayback">
-        <tr><th>No.</th><th class="figure_qes_th">設問</th><th>判定</th><th class="figure_qes_th">正解</th></tr>
-        <?php
-        for($i=1;$i<=10;$i++){
-        $rireki['question'][$i]=$_SESSION['rireki']['question'][$i];
-        $rireki['kekka'][$i]=$_SESSION['rireki']['kekka'][$i];
-        $rireki['answer'][$i]=$_SESSION['rireki']['answer'][$i];
-        echo"<tr><td class='figure_qes_td'>".$i."</td>";
-        echo"<td>".$rireki['question'][$i]."</td>";
-        echo"<td class='figure_qes_td'>".$rireki['kekka'][$i]."</td>";
-        echo"<td>".$rireki['answer'][$i]."</td></tr>";
-        
-        }
-        ?>
-        </table>
-        <button class='questions__btn slide-bg'><a href='../index.php'>トップへ戻る</a></button>
-        </div>
-        </section> 
+      <h2 class="main-title">準備中</h2>
+      <p class="sub-title">
+      完成を楽しみにお待ちください！
+      </p>
+    </section>
   
   <!-- javascript はここから -->  
   <script
@@ -126,7 +91,3 @@ $ok_count=$_SESSION['seikai']['ok_count'];
     <script src="../scripts/main.js"></script>
 </body>
 </html>
-<?php
-    $_SESSION=array();
-    session_destroy();
-  ?>

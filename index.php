@@ -94,7 +94,7 @@ if ($_GET['qs_session'] == 'delete') {
           <div class="questions__type">
             <span>記述式</span>
             <div class="questions__start">
-              <a href="#" class="btn btn-default btn-lg">学習する</a>
+              <a href="./quizJSchoise_DB/commingsoon.php" class="btn btn-default btn-lg">学習する</a>
             </div>
           </div>
         </div>
@@ -114,7 +114,7 @@ if ($_GET['qs_session'] == 'delete') {
           <div class="questions__type">
             <span>記述式</span>
             <div class="questions__start">
-              <a href="#" class="btn btn-default btn-lg">学習する</a>
+              <a href="./quizJSchoise_DB/commingsoon.php" class="btn btn-default btn-lg">学習する</a>
             </div>
           </div>
         </div>

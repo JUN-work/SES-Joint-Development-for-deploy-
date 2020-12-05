@@ -78,7 +78,11 @@ if (in_array($id, $rand2)){
 }
 
 for($i=1;$i<=3;$i++){
-  $sql='SELECT answer FROM js_questions WHERE id=:id';
+  if ($type == 'css') {
+    $sql = 'SELECT answer FROM css_questions WHERE id=:id';
+  } elseif ($type == 'js') {
+    $sql = 'SELECT answer FROM js_questions WHERE id=:id';
+  }
   $stmt=$pdo->prepare($sql);
   $stmt->bindParam(':id',$rand2[$i-1]);
   $stmt->execute();
@@ -173,7 +177,12 @@ $_SESSION['kotae']=$kotae
     </header>
     <!----------------------------------------------->
     <div class="subheader">
+    <!--urlパラメータの値によってsubheaderが変わる-->
+    <?php if ($type == 'css') : ?>
+      <h2>CSS - 選択式</h2>
+    <?php elseif ($type == 'js') : ?>
       <h2>JavaScript - 選択式</h2>
+    <?php endif; ?>
     </div>
     <section class="questions">
       <h2 class="main-title">Test your English</h2>

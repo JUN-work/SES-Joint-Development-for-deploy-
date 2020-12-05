@@ -1,6 +1,7 @@
 <?php
 
 session_start();
+$type = $_SESSION['type']; //セッション（CSS or JS）を変数に格納
 
 $monme=$_SESSION['monme'];
 $id=$_SESSION['seikai']['id'];
@@ -85,17 +86,24 @@ $_SESSION['rireki']['kekka'][$monme]=$hantei;
   <header>
       <nav>
         <div class="container navbar navbar-expand-lg navbar-light">
-          <a class="navbar-brand mr-auto" href="index.php">
+          <a class="navbar-brand mr-auto" href="../index.php">
             <img src="../img/SE2.png" alt="サイト名" height="70"/>
           </a>
+          <!--ログイン・新規登録を一時的に保留
           <a href="../register.php" class="btn btn-secondary btn-lg mr-1 text-white">新規登録</a>
           <a href="../login.php" class="btn btn-primary btn-lg mr-1 text-white">ログイン</a>
+          -->
         </div>
       </nav>
     </header>
     <!----------------------------------------------->
     <div class="subheader">
+    <!--urlパラメータの値によってsubheaderが変わる-->
+    <?php if ($type == 'css') : ?>
+      <h2>CSS - 選択式</h2>
+    <?php elseif ($type == 'js') : ?>
       <h2>JavaScript - 選択式</h2>
+    <?php endif; ?>
     </div>
     <section class="questions">
       <h2 class="main-title">Test your English</h2>
