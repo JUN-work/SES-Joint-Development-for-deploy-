@@ -33,6 +33,20 @@ header img{
 
 .main-top{
   background-image: url(/img/SE2_Top.png);
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.JS {
+  padding-top: 30px;
+}
+
+.staff-name {
+  font-weight: bold;
+}
+
+.staff-name span::before {
+  content: "☆";
 }
 
 /* ロード画面 */
@@ -91,5 +105,12 @@ header img{
   #footer-sns img {
     height: 29px;
     margin-right: 15px;
+  }
+}
+
+@media (max-width: 393px) {
+  /* 幅小スマートフォン向け */
+  .staff-name span::before {
+    content: "";
   }
 }

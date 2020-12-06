@@ -60,7 +60,7 @@ if ($_GET['qs_session'] == 'delete') {
       <nav>
         <div class="container navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand mr-auto" href="index.php">
-            <img src="img/SE2.png" alt="サイト名" height="70"/>
+            <img src="img/SE2.png" alt="SE2" height="70"/>
           </a>
           <!--ログイン・新規登録を一時的に保留
           <a href="register.php" class="btn btn-secondary btn-lg mr-1 text-white">新規登録</a>
@@ -74,8 +74,8 @@ if ($_GET['qs_session'] == 'delete') {
       <div class="main-top">
       <section class="questions">
         <div>
-          <h2 class="main-title">-Study English Site for Engineers-</h2>
-          <p class="sub-title">言語別の英語を学習しよう！</p>
+          <h2 class="main-title text-center font-patrick">-Study English Site for Engineers-</h2>
+          <p class="sub-title text-center font-patrick">言語別の英語を学習しよう！</p>
         </div>
         <div class="questions__title">
           <button id="questions__css" class="questions__btn slide-bg">
@@ -98,7 +98,7 @@ if ($_GET['qs_session'] == 'delete') {
             </div>
           </div>
         </div>
-        <div class="questions__title">
+        <div class="JS questions__title">
           <button id="questions__javascript" class="questions__btn slide-bg">
             JavaScript
           </button>
@@ -132,7 +132,7 @@ if ($_GET['qs_session'] == 'delete') {
         <div id="footer-index" class="row pt-1">
           <!--pt-4→pt-1に変更-->
           <ul class="col list-unstyled">
-            <li>JUN</li>
+            <li class="staff-name"><span></span>JUN</li>
             <li>
               <ul class="list-unstyled">
                 <li><a href="https://twitter.com/JUN_work_life" target="_blank" rel="noopener noreferrer">Twitter</a></li>
@@ -141,7 +141,7 @@ if ($_GET['qs_session'] == 'delete') {
             </li>
           </ul>
           <ul class="col list-unstyled">
-            <li>Yuki.Ishizaki</li>
+            <li class="staff-name"><span></span></li>Yuki.Ishizaki</li>
             <li>
               <ul class="list-unstyled">
                 <li><a href="https://twitter.com/zakky0519" target="_blank" rel="noopener noreferrer">Twitter</a></li>
@@ -150,7 +150,7 @@ if ($_GET['qs_session'] == 'delete') {
             </li>
           </ul>
           <ul class="col list-unstyled">
-            <li>そってぃ</li>
+            <li class="staff-name"><span></span>そってぃ</li>
             <li>
               <ul class="list-unstyled">
                 <li><a href="https://twitter.com/sohhprog" target="_blank" rel="noopener noreferrer">Twitter</a></li>
@@ -159,7 +159,7 @@ if ($_GET['qs_session'] == 'delete') {
             </li>
           </ul>
           <ul class="col list-unstyled">
-            <li>綾</li>
+            <li class="staff-name"><span></span>綾</li>
             <li>
               <ul class="list-unstyled">
                 <li><a href="https://twitter.com/yanagi4939" target="_blank" rel="noopener noreferrer">Twitter</a></li>
@@ -186,7 +186,7 @@ if ($_GET['qs_session'] == 'delete') {
 
     <div class="start">
       <div class="start-inner">
-        <img src="/img/SE2.png" alt="">
+        <img src="/img/SE2.png" alt="SE2-logo">
       </div>
     </div>
 
